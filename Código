@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+    setlocale(LC_ALL,"Portuguese");
+    
+    float media,n1,n2,n3;
+    
+    int aluno;
+    
+    for(aluno = 1; aluno <=10; aluno++){
+        printf("Digite a primeira nota do %d° aluno:\n",aluno);
+        scanf("%f",&n1);
+        
+        printf("Digite a segunda nota do %d° aluno:\n",aluno);
+        scanf("%f",&n2);
+        
+        printf("Digite a terceira nota do %d° aluno:\n",aluno);
+        scanf("%f",&n3);
+        
+        media = (n1+n2+n3)/3;
+        
+        if( media >= 9){
+            printf("O %d° aluno obteve o conceito A\n",aluno);
+        }
+        else if(media >=7 && media <9){
+            printf("O %d° aluno obteve o conceito B\n",aluno);
+        }
+        else if(media >=6 && media <7){
+            printf("O %d° aluno obteve o conceito C\n",aluno);
+        }
+        else if(media >=4 && media <6){
+            printf("O %d° aluno obteve o conceito D\n",aluno);
+        }
+        else{
+            printf("O %d° aluno obteve o conceito E\n",aluno);
+        }
+        
+    }
+
+    
+    return(0);
+}
